@@ -25,8 +25,8 @@ export class MainPageComponent {
 
   // objeto
   nuevo: Personaje = {
-    nombre: 'Trunks',
-    poder: 14000
+    nombre: '',
+    poder: 0
   }
 
   agregar(){
