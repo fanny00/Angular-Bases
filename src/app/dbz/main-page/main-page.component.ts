@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
+import {  } from '../agregar/agregar.component';
 
 @Component({
   selector: 'app-main-page',
@@ -19,21 +20,10 @@ export class MainPageComponent {
     }
   ];
 
-  // objeto
   nuevo: Personaje = {
-    nombre: '',
-    poder: 0
+    nombre: 'Maestro Roshi',
+    poder: 1000
   }
 
-  agregar(){
-    if ( this.nuevo.nombre.trim().length === 0 ){
-      return;
-    }
-    console.log(this.nuevo);
-    this.personajes.push(this.nuevo);
-    this.nuevo = {
-      nombre: '',
-      poder: 0
-    }
-  }
+  
 }
