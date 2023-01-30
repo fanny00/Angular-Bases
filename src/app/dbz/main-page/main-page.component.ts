@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
-import {  } from '../agregar/agregar.component';
+import { DbzService } from '../services/dbz.service';
 
 @Component({
   selector: 'app-main-page',
@@ -21,11 +21,13 @@ export class MainPageComponent {
   ];
 
   nuevo: Personaje = {
-    nombre: 'Maestro Roshi',
-    poder: 1000
+    nombre: '',
+    poder: 0
   }
 
   agregarNuevoPersonaje( argumento: Personaje ){
     this.personajes.push( argumento );
   }
+
+  constructor( public dbzService: DbzService ) {}
 }
